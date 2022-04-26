@@ -1,0 +1,124 @@
+{% extends 'Dashboard.html' %} {% block content %}
+<div class="col-md-9">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <div class="col-md-7 bg-primary mt-2 ml-5 text-light">
+          <div class="form mt-5">
+            <form
+              action="/review"
+              method="POST"
+              class="border-rounded"
+              style="height: 620px"
+            >
+              <h3 class="alert alert-light border rounded p-2">
+                Review Your College
+              </h3>
+
+              {% csrf_token %} {% if error %}
+              <div class="alert alert-success" role="alert">{{error}}</div>
+              {% endif %}
+
+              <div class="form-group mt-3">
+                <label for="">Old School</label>
+                <input
+                  required
+                  type="text"
+                  name="oldschool"
+                  id=""
+                  class="form-control form-control-sm"
+                  value="{{values.oldschool}}"
+                  placeholder="Enter your old School name"
+                />
+              </div>
+              <div class="form-group">
+                <label for=""> School's Address</label>
+                <input
+                  required
+                  type="text"
+                  name="address"
+                  id=""
+                  class="form-control form control-sm"
+                  value="{{values.address}}"
+                  placeholder="Enter your old school Address"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">College Name</label>
+                <input
+                  required
+                  type="text"
+                  name="collegeName"
+                  id=""
+                  class="form-control form-control-sm"
+                  value="{{values.collegeName}}"
+                  placeholder="Enter your college Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">College Location</label>
+                <input
+                  required
+                  type="text"
+                  name="collegeLocation"
+                  id=""
+                  class="form-control form-control-sm"
+                  value="{{values.collegeLocation}}"
+                  placeholder="Enter your exact college location"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Faculty</label>
+                <select name="faculty" class="form-control">
+                  {% for results in showFaculty %}
+                  <option value="{{results.id}}">{{results.name}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="">College's Review</label>
+                <input
+                  required
+                  type="text"
+                  name="review"
+                  id=""
+                  class="form-control form-control-sm"
+                  value="{{values.review}}"
+                  placeholder="Enter your college Review"
+                />
+              </div>
+              <div class = "rate">
+                <input type= "radio" name = "rating" id = "rating10" value= "5" required/>
+                <label for="rating10" title="5"></label>
+                <input type= "radio" name = "rating" id = "rating9" value= "4.5" required/>
+                <label for="rating9" title="4.5" class = "half"></label>
+                <input type= "radio" name = "rating" id = "rating8" value= "4" required/>
+                <label for="rating8" title="4"></label>
+                <input type= "radio" name = "rating" id = "rating7" value= "3.5" required/>
+                <label for="rating7" title="3.5" class = "half"></label>
+                <input type= "radio" name = "rating" id = "rating6" value= "3" required/>
+                <label for="rating6" title="3"></label>
+                <input type= "radio" name = "rating" id = "rating5" value= "2.5" required/>
+                <label for="rating5" title="2.5" class = "half"></label>
+                <input type= "radio" name = "rating" id = "rating4" value= "2" required/>
+                <label for="rating4" title="2"></label>
+                <input type= "radio" name = "rating" id = "rating3" value= "1.5" required/>
+                <label for="rating3" title="1.5" class = "half"></label>
+                <input type= "radio" name = "rating" id = "rating2" value= "1" required/>
+                <label for="rating2" title="1"></label>
+                <input type= "radio" name = "rating" id = "rating1" value= "0.5" required/>
+                <label for="rating1" title="0.5" class = "half"></label>
+              </div>
+              <br>
+              <button type="submit" class="btn btn col-lg-4">
+                Save changes
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,192 @@
+body{
+    background-color: floralwhite;
+}
+body{
+    background-color: antiquewhite;
+}
+
+.reviewback{
+margin-top:30px;
+}
+
+.topic{
+font-size:37px;
+font-weight: 900;
+text-align: center;
+font-family:Eras Bold ITC;
+}
+.imageSlider{
+    height:500px;
+    width: 900px;
+    border-color: aqua;
+    border-right: 5px solid blue;
+    border-left: 5px solid blue;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+.contentPart{
+height:550px;
+width:100%;
+background-image: url("../images/s.png");
+background-repeat: no-repeat;
+background-size: 1500px 550px;
+background-attachment: scroll;
+background-color:aliceblue;
+}
+.footer{
+height:300px;
+width:100%;
+background-color:black;
+border-top: 6px solid blue;
+}
+.college{
+    text-decoration: dashed;
+    color: aliceblue;
+    font-size: 24px;
+    padding-bottom:-4px;
+    text-align: center;
+    margin-top:10px;
+    font-family:Bauhaus 93 ;
+}
+.h{
+color:aliceblue;
+text-align: center;
+font-size: medium;
+}
+.c{
+    color: aliceblue;
+    text-align: center;
+    font-size: medium;
+}
+.p{
+    color: aliceblue;
+    text-align: center;
+    font-size: medium;
+}
+.r{
+    color: aliceblue;
+    text-align: center;
+    font-size: medium;
+}
+.l{
+    color: aliceblue;
+    text-align: center;
+    font-size: medium;
+}
+.signBtn{
+    margin-top: 163px;
+    margin-left: 184px;
+}
+.DisplayName{
+    padding-left:10px;
+    padding-top: 26px;
+}
+.welcome{
+    font-size:18px;
+    font-family:Maler;
+    color:Blue;
+}
+.topic{
+    font-size:35px;
+    font-family:Maler;
+    text-decoration:underline;
+}
+
+.schoolimg{
+    width: 58%;
+    height: 170px;
+    margin-left: 130px;
+    border: 4px solid blue;
+    border-radius: 25px;
+
+}
+.card-title{
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 12px;
+    font-style: oblique;
+}
+
+/* Review Slider */
+.img-text{
+    width: 100%;
+    height: 50px;
+    display: block;
+    text-align: center;
+    padding: 30% 4%;
+    background: #c0bea0;
+    color: #fff;
+    border-radius: 10px;
+}
+.img-text h2{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.img-text p{
+    font-size: 14 px;
+}
+.single-box{
+    position: relative;
+    margin-bottom: 30px;
+}
+.img-area{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 3px solid #fff;
+    overflow: hidden;
+    top: 10px;
+    left: 125px;
+    border-radius: 50%;
+}
+
+/*Ratings*/
+.checked {
+     color: orange;
+}
+
+/*hide the radio button*/
+.rate > input{
+    display:none;
+}
+.rate{
+    display: inline-block;
+    border: 0;
+}
+.rate > label{
+    float: right;
+}
+
+.rate > label{
+    float: right;
+}
+
+/*start showing the star*/
+.rate > label:before{
+    display: inline-block;
+    font-size: 1.7 rem;
+    font-family: FontAwesome;
+    content: "\f005";
+    margin: 0;
+    padding: 0.1 rem .2 rem;
+    cursor: pointer;
+}
+
+/* half star */
+.rate .half:before{
+    content: "\f089";
+    position: absolute;
+    padding-right: 0;
+}
+
+/* click and hover */
+input:checked ~ label, label:hover ~ label{
+    color: #ffb503 ;
+}
+/* hoer heightlight */
+input:checked + label:hover, input:checked ~ label:hover, input:checked ~ label:hover ~ label,
+label:hover ~ input:checked ~ label{
+    color: #cc9000;
+}
+
